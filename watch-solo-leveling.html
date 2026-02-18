@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO META TAGS -->
+    <title>Solo Leveling Season 2: Uncensored & No Ads (Batch Link)</title>
+    <meta name="description"
+        content="Watch Solo Leveling Season 2 online for free. Uncensored, 1080p, and no ads. Batch download links available on OtakuNexa.">
+    <meta name="keywords"
+        content="solo leveling season 2 free, watch solo leveling uncensored, anime batch download, otakunexa">
+
+    <!-- FONTS & ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/style-content.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="simple-nav">
+        <a href="index.html" class="nav-brand">OTAKU<span style="color:var(--neon-pink)">NEXA</span></a>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="content-container">
+
+        <!-- [AD SLOT: TOP] -->
+        <div id="ad-top" class="ad-slot"></div>
+
+        <!-- HEADER -->
+        <h1 id="page-title">Solo Leveling Season 2: Uncensored & No Ads (Batch Link)</h1>
+        <p class="meta-info"><i class="far fa-clock"></i> Updated: Feb 2026</p>
+
+        <div id="article-body">
+            <p><strong>ARISE.</strong> Jinwoo is finally hitting S-Rank status, and the hype train has no brakes. The
+                animation for the shadow army scenes? Absolute cinema. If you aren't watching this weekly, are you even
+                an anime fan?</p>
+
+            <p>But here's the problem. Crunchyroll locks the good stuff behind an expensive paywall (and their player
+                still bugs out). The generic pirate sites? They dim the screen every time there's a flashing light
+                because of "seizure warnings" (bro, let me risk it), and the watermarks are annoying.</p>
+
+            <p>You want that crisp 1080p, <strong>uncensored</strong> experience where the shadows actually look black,
+                not grey compressed mess. You want to see Igris in 4K.</p>
+
+            <!-- [AD SLOT: MID] -->
+            <div id="ad-mid" class="ad-slot"></div>
+
+            <h2>Where to Watch (The Right Way)</h2>
+            <p>We source our files directly from the Blu-Ray/Web-DL source. No TV-dimming ghostly overlays. No "BET365"
+                watermarks covering the subtitles.</p>
+
+            <p><strong>Option 1: Web Player (Good)</strong><br>
+                You can use our Web Version linked below. It's solid, but you might see an ad or two to keep the servers
+                running.</p>
+
+            <p><strong>Option 2: The App (The Choice of Kings)</strong><br>
+                Download the <strong>OtakuNexa App</strong>. You get:<br>
+                - Batch Downloads (Grab episodes 1-12 in one click).<br>
+                - Background Play (Listen to the OST while gaming).<br>
+                - <strong>0 Ads.</strong> Seriously.</p>
+        </div>
+
+        <!-- CTA BOX -->
+        <div class="app-cta-box">
+            <div class="cta-title">SUMMON THE APP.</div>
+            <p>Don't let ads ruins the immersion. Join the Shadow Monarchs with the premium app experience.</p>
+            <a href="index.html" class="cta-btn"><i class="fas fa-download"></i> DOWNLOAD BATCH (APP)</a>
+            <div style="margin-top: 15px;">
+                <a href="config.js" onclick="event.preventDefault(); document.getElementById('btn-web-launch').click();"
+                    style="color: #aaa; text-decoration: underline; font-size: 0.8rem;">Or continue to Web Player (w.
+                    Ads)</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- STICKY FOOTER -->
+    <div class="sticky-footer">
+        <span style="color:white; font-weight:bold; font-size:0.9rem;">OtakuNexa App</span>
+        <a href="index.html"
+            style="background:var(--neon-cyan); color:black; padding:5px 15px; border-radius:20px; text-decoration:none; font-weight:bold; font-size:0.8rem;">Download</a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="assets/adsConfig.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof ADS_CONFIG === 'undefined') return;
+            const globalEnabled = ADS_CONFIG.enableGlobalAds;
+
+            const injectAd = (slotId, configKey) => {
+                const el = document.getElementById(slotId);
+                if (!el) return;
+                const slotConfig = ADS_CONFIG.slots[configKey];
+                if (globalEnabled && slotConfig && slotConfig.enabled) {
+                    el.innerHTML = slotConfig.code;
+                } else {
+                    el.classList.add('collapsed');
+                }
+            };
+
+            injectAd('ad-top', 'topBanner');
+            injectAd('ad-mid', 'midContent');
+
+            if (globalEnabled && ADS_CONFIG.slots.popUnder && ADS_CONFIG.slots.popUnder.enabled) {
+                const popDiv = document.createElement('div');
+                popDiv.innerHTML = ADS_CONFIG.slots.popUnder.code;
+                document.body.appendChild(popDiv);
+            }
+        });
+    </script>
+</body>
+
+</html>

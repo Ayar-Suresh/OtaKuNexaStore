@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuNexa Content</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/style-content.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="simple-nav">
+        <a href="index.html" class="nav-brand">OTAKU<span style="color:var(--neon-pink)">NEXA</span></a>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="content-container">
+
+        <!-- [AD SLOT: TOP] -->
+        <div id="ad-top" class="ad-slot"></div>
+
+        <!-- MAIN CONTENT INJECTED HERE -->
+        <!-- EXAMPLE CONTENT: -->
+        <h1 id="page-title">Page Title Here</h1>
+        <p class="meta-info"><i class="far fa-clock"></i> Updated: 2026</p>
+
+        <div id="article-body">
+            <!-- Article content goes here -->
+        </div>
+
+        <!-- CTA BOX -->
+        <div class="app-cta-box">
+            <div class="cta-title">STOP THE BUFFERING.</div>
+            <p>Seriously. Our app pre-caches episodes so you never lag again. <br>Plus, it uses 40% less data than
+                streaming on a browser.</p>
+            <a href="index.html" class="cta-btn"><i class="fas fa-download"></i> GET THE APP (FREE)</a>
+        </div>
+
+    </div>
+
+    <!-- STICKY FOOTER -->
+    <div class="sticky-footer">
+        <span style="color:white; font-weight:bold; font-size:0.9rem;">OtakuNexa App</span>
+        <a href="index.html"
+            style="background:var(--neon-cyan); color:black; padding:5px 15px; border-radius:20px; text-decoration:none; font-weight:bold; font-size:0.8rem;">Download</a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="assets/adsConfig.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. CONFIG CHECK
+            if (typeof ADS_CONFIG === 'undefined') {
+                console.error("ADS_CONFIG not loaded.");
+                return;
+            }
+
+            const globalEnabled = ADS_CONFIG.enableGlobalAds;
+
+            // 2. HELPER FUNCTION
+            const injectAd = (slotId, configKey) => {
+                const el = document.getElementById(slotId);
+                if (!el) return;
+
+                const slotConfig = ADS_CONFIG.slots[configKey];
+
+                // Show Ad if: Global ON AND Slot ON
+                if (globalEnabled && slotConfig && slotConfig.enabled) {
+                    el.innerHTML = slotConfig.code;
+                } else {
+                    // Hide completely
+                    el.classList.add('collapsed');
+                }
+            };
+
+            // 3. INJECT ADS
+            injectAd('ad-top', 'topBanner');
+            injectAd('ad-mid', 'midContent');
+
+            // 4. POPUNDER
+            if (globalEnabled && ADS_CONFIG.slots.popUnder.enabled) {
+                const popDiv = document.createElement('div');
+                popDiv.innerHTML = ADS_CONFIG.slots.popUnder.code;
+                document.body.appendChild(popDiv);
+            }
+        });
+    </script>
+</body>
+
+</html>

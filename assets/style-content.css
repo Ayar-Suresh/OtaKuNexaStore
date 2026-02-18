@@ -1,0 +1,251 @@
+/* ============================================================
+   OtakuNexa Content Theme - "Neon Cyberpunk"
+   ============================================================ */
+
+:root {
+    --bg-dark: #050505;
+    --bg-card: #0f0f12;
+    --neon-pink: #FF00CC;
+    --neon-cyan: #00FFFF;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --font-head: 'Orbitron', sans-serif;
+    /* Assuming you have this or similar */
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* --- LAYOUT --- */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- TYPOGRAPHY --- */
+h1,
+h2,
+h3 {
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-left: 4px solid var(--neon-cyan);
+    padding-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+strong {
+    color: white;
+    font-weight: 700;
+}
+
+/* --- IMAGES & MEDIA --- */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 255, 255, 0.15);
+    margin: 25px 0;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- AD SLOTS --- */
+.ad-slot {
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.02);
+    min-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* UTILITY: Hides ads when disabled */
+.ad-slot.collapsed {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* --- CTA BOX (The "Trojan Horse") --- */
+.app-cta-box {
+    background: linear-gradient(135deg, rgba(255, 0, 204, 0.1), rgba(0, 0, 0, 0.4));
+    border: 1px solid var(--neon-pink);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin: 50px 0;
+    box-shadow: 0 0 30px rgba(255, 0, 204, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-pink), transparent);
+    animation: scanline 3s infinite linear;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.cta-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    font-family: var(--font-head);
+}
+
+.cta-btn {
+    display: inline-block;
+    background: var(--neon-pink);
+    color: white;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 50px;
+    /* Pill shape */
+    text-decoration: none;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 204, 0.7);
+}
+
+/* --- NAVIGATION & FOOTER --- */
+.simple-nav {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: var(--font-head);
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.back-link {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid #333;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: max-content;
+    max-width: 90%;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
+    .content-container {
+        padding: 20px 15px;
+    }
+
+    /* Fix Big Button on Mobile */
+    .cta-btn {
+        display: block;
+        /* Full width on mobile */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        margin-top: 15px;
+    }
+
+    .app-cta-box {
+        padding: 20px;
+        margin: 30px 0;
+    }
+
+    .cta-title {
+        font-size: 1.2rem;
+    }
+
+    /* Sticky Footer Adjustments */
+    .sticky-footer {
+        width: 90%;
+        max-width: none;
+        padding: 8px 15px;
+        bottom: 15px;
+        justify-content: space-between;
+    }
+}
