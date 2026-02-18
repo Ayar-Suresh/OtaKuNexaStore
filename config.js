@@ -16,7 +16,7 @@ const CONFIG = {
     // [2] WEB VERSION
     // URL where your web app is hosted (e.g., Vercel, Netlify)
     // If not ready, keep it as "#" or the placeholder.
-    webUrl: "YOUR_WEB_VERSION_URL_HERE",
+    webUrl: "https://otakunexa-web.pages.dev/#/home",
 
     // [3] TUTORIAL VIDEO
     // The YouTube connection URL. 
@@ -28,3 +28,4 @@ const CONFIG = {
 //  DO NOT EDIT BELOW THIS LINE
 // ============================================================
 console.log("OtakuNexa Config Loaded:", CONFIG);
+
