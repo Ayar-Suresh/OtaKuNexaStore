@@ -21,12 +21,13 @@ const CONFIG = {
     // [3] TUTORIAL VIDEO
     // The YouTube connection URL. 
     // IMPORTANT: Use the "embed" format: https://www.youtube.com/embed/VIDEO_ID
-    tutorialVideo: "https://youtu.be/Vs_G0nS7qKU?si=bWPyw__4xG_rELmh"
+    tutorialVideo: "https://www.youtube.com/embed/Vs_G0nS7qKU?si=CH2nGbtJc_Wl-gri"
 };
 
 // ============================================================
 //  DO NOT EDIT BELOW THIS LINE
 // ============================================================
 console.log("OtakuNexa Config Loaded:", CONFIG);
+
 
 
