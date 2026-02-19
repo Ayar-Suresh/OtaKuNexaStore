@@ -15,9 +15,8 @@ const ADS_CONFIG = {
             enabled: true,
             code: `
                 <!-- PLACE YOUR TOP BANNER AD CODE HERE -->
-                <div style="background:#222; color:#555; padding:20px; text-align:center; border:1px dashed #444;">
-                    [AD_SPACE: TOP_BANNER_728x90]
-                </div>
+             <script async="async" data-cfasync="false" src="https://pl28583757.effectivegatecpm.com/14ba1b46de6424c181d4513e22c69881/invoke.js"></script>
+<div id="container-14ba1b46de6424c181d4513e22c69881"></div>
             `
         },
 
@@ -44,3 +43,4 @@ const ADS_CONFIG = {
 };
 
 console.log("ADS_CONFIG Loaded. Global Status:", ADS_CONFIG.enableGlobalAds);
+
