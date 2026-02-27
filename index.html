@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="application-name" content="OtaKuNexa">
-<meta property="og:title" content="OtaKuNexa - The Ultimate Anime Haven">
-   <title>OtaKuNexa - Anime Download App for Android | Free Anime Streaming</title>
     
-    <script type="application/ld+json">
+    <title>OtakuNexa - Free Anime Streaming & Batch Download App</title>
+    <meta name="description" content="Download OtakuNexa, the ultimate free anime streaming platform for Android. Watch and batch download HD anime, subbed and dubbed, with zero link shorteners.">
+    <meta name="keywords" content="anime streaming platform, free anime, anime download, watch anime online, free anime app Android, batch download anime, ad-free anime, OtakuNexa, sub and dub anime">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://otakunexa.online/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otakunexa.online/">
+    <meta property="og:title" content="OtakuNexa - The Ultimate Free Anime Haven">
+    <meta property="og:description" content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, sub and dub available.">
+    <meta property="og:site_name" content="OtakuNexa">
+    <meta property="og:image" content="https://otakunexa.online/assets/search_icon.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://otakunexa.online/">
+    <meta property="twitter:title" content="OtakuNexa - Free Anime Streaming & Download App">
+    <meta property="twitter:description" content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, no link shorteners.">
+    <meta property="twitter:image" content="https://otakunexa.online/assets/search_icon.png"> <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "OtakuNexa",
       "operatingSystem": "Android",
       "applicationCategory": "EntertainmentApplication",
-      "description": "The ultimate ad-free anime streaming and batch downloading application for Android. Features zero link shorteners, 1080p streaming, and an active community.",
+      "description": "The ultimate ad-free anime streaming and batch downloading application for Android. Features zero link shorteners, 1080p streaming, subbed and dubbed episodes, and an active community.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -27,16 +39,16 @@
         "ratingCount": "1250"
       }
     }
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "OtaKuNexa",
-  "alternateName": "OtakuNexa Anime",
-  "url": "https://otakunexa.online/"
-}
-</script>
-    <meta property="og:site_name" content="OtakuNexa">
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "OtaKuNexa",
+      "alternateName": ["OtakuNexa Anime", "OtakuNexa Streaming Platform"],
+      "url": "https://otakunexa.online/"
+    }
+    </script>
     <link rel="icon" href="assets/search_icon.png" sizes="any">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +56,7 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         /* --- CORE VARIABLES & RESET --- */
         :root {
@@ -56,13 +68,11 @@
             --font-head: 'Orbitron', sans-serif;
             --font-body: 'Rajdhani', sans-serif;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -70,24 +80,20 @@
             overflow-x: hidden;
             line-height: 1.5;
         }
-
         /* --- UTILITIES --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 8px;
         }
-
         .highlight-pink {
             color: var(--neon-pink);
             text-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
         }
-
         .highlight-cyan {
             color: var(--neon-cyan);
             text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
         }
-
         /* --- BUTTONS & DROPDOWN STYLES (UPDATED) --- */
         .btn {
             display: inline-block;
@@ -103,38 +109,32 @@
             position: relative;
             z-index: 10;
         }
-
         .btn-primary {
             background: var(--neon-pink);
             color: white;
             box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
         }
-
         .btn-primary:hover {
             background: white;
             color: var(--neon-pink);
             box-shadow: 0 0 40px rgba(255, 0, 204, 0.8);
             transform: translateY(-2px);
         }
-
         .btn-secondary {
             background: transparent;
             border: 2px solid var(--neon-cyan);
             color: var(--neon-cyan);
         }
-
         .btn-secondary:hover {
             background: var(--neon-cyan);
             color: black;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
         }
-
         /* --- CUSTOM DROPDOWN CSS --- */
         .dropdown {
             position: relative;
             display: inline-block;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -148,13 +148,11 @@
             left: 0;
             margin-top: 5px;
         }
-
         /* Show the dropdown menu on hover */
         .dropdown:hover .dropdown-content {
             display: block;
             animation: fadeIn 0.3s ease;
         }
-
         .dropdown-content a {
             color: white;
             padding: 15px 20px;
@@ -167,17 +165,14 @@
             transition: 0.2s;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .dropdown-content a:last-child {
             border-bottom: none;
         }
-
         .dropdown-content a:hover {
             background-color: var(--neon-pink);
             color: white;
             padding-left: 25px;
         }
-
         .server-tag {
             font-size: 0.7rem;
             background: rgba(255, 255, 255, 0.2);
@@ -185,25 +180,21 @@
             border-radius: 4px;
             margin-left: 10px;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(-10px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         h1,
         h2,
         h3 {
             font-family: var(--font-head);
         }
-
         /* --- BACKGROUND PARTICLES --- */
         #particles {
             position: fixed;
@@ -214,7 +205,6 @@
             z-index: -1;
             opacity: 0.3;
         }
-
         /* --- NAVBAR --- */
         nav {
             display: flex;
@@ -228,17 +218,14 @@
             z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .logo-container img {
             height: 70px;
             filter: drop-shadow(0 0 5px var(--neon-pink));
         }
-
         .nav-links {
             display: flex;
             gap: 30px;
         }
-
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -247,12 +234,10 @@
             letter-spacing: 1px;
             transition: 0.3s;
         }
-
         .nav-links a:hover {
             color: var(--neon-cyan);
             text-shadow: 0 0 8px var(--neon-cyan);
         }
-
         /* --- HERO SECTION --- */
         .hero {
             min-height: 100vh;
@@ -264,13 +249,11 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero-content {
             flex: 1;
             padding-right: 50px;
             z-index: 2;
         }
-
         .hero-tagline {
             font-size: 1.2rem;
             color: var(--neon-cyan);
@@ -279,21 +262,18 @@
             font-weight: 700;
             text-transform: uppercase;
         }
-
         .hero h1 {
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-
         .hero-desc {
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: #aaa;
             max-width: 600px;
         }
-
         /* --- PHONE MOCKUP & INTERACTIVE UI --- */
         .hero-visual {
             flex: 1;
@@ -301,7 +281,6 @@
             justify-content: center;
             position: relative;
         }
-
         .app-mockup {
             width: 340px;
             height: 650px;
@@ -314,7 +293,6 @@
             overflow: hidden;
             animation: float 6s ease-in-out infinite;
         }
-
         .app-mockup::before {
             content: '';
             position: absolute;
@@ -328,14 +306,12 @@
             border-bottom-right-radius: 15px;
             z-index: 30;
         }
-
         .screen-content {
             width: 100%;
             height: 100%;
             position: relative;
             background: #000;
         }
-
         /* LOADING SCREEN */
         .loading-screen {
             position: absolute;
@@ -350,13 +326,11 @@
             justify-content: center;
             transition: opacity 0.5s ease;
         }
-
         .loading-screen img {
             width: 80%;
             height: auto;
             object-fit: contain;
         }
-
         /* STATUS BAR */
         .status-bar {
             position: absolute;
@@ -374,12 +348,10 @@
             font-family: sans-serif;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
         }
-
         .status-icons i {
             margin-left: 5px;
             font-size: 10px;
         }
-
         /* APP INTERFACE */
         .app-interface {
             width: 100%;
@@ -389,7 +361,6 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-
         .app-body {
             flex: 1;
             background: #111;
@@ -398,14 +369,12 @@
             cursor: pointer;
             padding-top: 30px;
         }
-
         .app-body img {
             width: 100%;
             height: 100%;
             object-position: top;
             transition: opacity 0.3s ease;
         }
-
         /* NAVIGATION */
         .app-nav {
             height: 50px;
@@ -418,7 +387,6 @@
             z-index: 5;
             padding-bottom: 5px;
         }
-
         .nav-item {
             color: #666;
             cursor: pointer;
@@ -428,26 +396,21 @@
             align-items: center;
             gap: 2px;
         }
-
         .nav-item i {
             font-size: 1rem;
         }
-
         .nav-item span {
             font-size: 0.6rem;
             font-weight: 500;
         }
-
         .nav-item:hover,
         .nav-item.active {
             color: var(--neon-pink);
         }
-
         /* ANIMATIONS */
         .glitch-text {
             position: relative;
         }
-
         .glitch-text::before,
         .glitch-text::after {
             content: attr(data-text);
@@ -458,62 +421,51 @@
             height: 100%;
             background: var(--bg-dark);
         }
-
         .glitch-text::before {
             left: 2px;
             text-shadow: -1px 0 var(--neon-pink);
             clip: rect(24px, 550px, 90px, 0);
             animation: glitch-anim-2 3s infinite linear alternate-reverse;
         }
-
         .glitch-text::after {
             left: -2px;
             text-shadow: -1px 0 var(--neon-cyan);
             clip: rect(85px, 550px, 140px, 0);
             animation: glitch-anim 2.5s infinite linear alternate-reverse;
         }
-
         @keyframes glitch-anim {
             0% {
                 clip: rect(14px, 9999px, 122px, 0);
             }
-
             100% {
                 clip: rect(69px, 9999px, 18px, 0);
             }
         }
-
         @keyframes glitch-anim-2 {
             0% {
                 clip: rect(122px, 9999px, 14px, 0);
             }
-
             100% {
                 clip: rect(18px, 9999px, 69px, 0);
             }
         }
-
         @keyframes float {
             0% {
                 transform: translateY(0px);
             }
-
             50% {
                 transform: translateY(-15px);
             }
-
             100% {
                 transform: translateY(0px);
             }
         }
-
         /* --- SECTIONS --- */
         .pirate-section {
             padding: 80px 0;
             text-align: center;
             background: linear-gradient(180deg, var(--bg-dark) 0%, #150010 100%);
         }
-
         .pirate-box {
             border: 2px solid var(--neon-cyan);
             background: rgba(0, 0, 0, 0.6);
@@ -523,37 +475,31 @@
             margin: 0 auto;
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
         }
-
         .pirate-icon {
             font-size: 3rem;
             color: var(--neon-pink);
             margin-bottom: 20px;
         }
-
         .pirate-text {
             font-size: 1.3rem;
             font-style: italic;
             color: #fff;
         }
-
         .features {
             padding: 80px 0;
             background: var(--bg-dark);
         }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
             text-transform: uppercase;
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
-
         .card {
             background: var(--bg-panel);
             padding: 30px;
@@ -563,7 +509,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -575,37 +520,30 @@
             transform: scaleY(0);
             transition: 0.3s;
         }
-
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-
         .card:hover::before {
             transform: scaleY(1);
         }
-
         .card-icon {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--neon-cyan);
         }
-
         .card h3 {
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
-
         .card p {
             color: #aaa;
             font-size: 1rem;
         }
-
         .safety-section {
             padding: 60px 0;
             background: #0a0a0e;
         }
-
         .terminal-window {
             background: #1e1e1e;
             border-radius: 10px;
@@ -616,44 +554,36 @@
             overflow: hidden;
             border: 1px solid #333;
         }
-
         .terminal-header {
             background: #2d2d2d;
             padding: 10px 15px;
             display: flex;
             gap: 8px;
         }
-
         .dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
-
         .red {
             background: #ff5f56;
         }
-
         .yellow {
             background: #ffbd2e;
         }
-
         .green {
             background: #27c93f;
         }
-
         .terminal-body {
             padding: 20px;
             color: #27c93f;
             font-size: 0.9rem;
         }
-
         .scan-line {
             margin-bottom: 8px;
             display: block;
             word-break: break-all;
         }
-
         .scan-success {
             color: var(--neon-cyan);
             font-weight: bold;
@@ -662,44 +592,37 @@
             padding: 10px;
             display: inline-block;
         }
-
         footer {
             padding: 50px 0;
             background: black;
             text-align: center;
             border-top: 1px solid #333;
         }
-
         .social-icons a {
             color: white;
             font-size: 1.5rem;
             margin: 0 10px;
             transition: 0.3s;
         }
-
         .social-icons a:hover {
             color: var(--neon-pink);
         }
-
         /* --- RESPONSIVE MOBILE TWEAKS --- */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 3rem;
             }
-
             .app-mockup {
                 width: 280px;
                 height: 580px;
             }
         }
-
         /* --- WEB VERSION SECTION --- */
         .web-section {
             padding: 80px 0;
             background: linear-gradient(180deg, #150010 0%, var(--bg-dark) 100%);
             text-align: center;
         }
-
         .web-card {
             background: rgba(255, 255, 255, 0.05);
             border: 2px solid var(--neon-cyan);
@@ -715,7 +638,6 @@
             flex-direction: column;
             justify-content: center;
         }
-
         .web-card::before {
             content: 'WEB';
             position: absolute;
@@ -727,7 +649,6 @@
             pointer-events: none;
             color: white;
         }
-
         .web-grid {
             display: flex;
             flex-direction: row;
@@ -738,18 +659,15 @@
             position: relative;
             z-index: 2;
         }
-
         .web-info {
             flex: 1;
         }
-
         .web-visual {
             flex: 0.8;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
         .web-tag {
             background: var(--neon-cyan);
             color: #000;
@@ -761,14 +679,12 @@
             display: inline-block;
             margin-bottom: 25px;
         }
-
         .web-title {
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 25px;
             text-transform: uppercase;
         }
-
         .web-desc {
             color: #ccc;
             margin-bottom: 35px;
@@ -776,31 +692,25 @@
             line-height: 1.8;
             max-width: 90%;
         }
-
         .btn-group {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .btn-glow {
             animation: pulse-glow 2s infinite;
         }
-
         @keyframes pulse-glow {
             0% {
                 box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
             }
-
             70% {
                 box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);
             }
-
             100% {
                 box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
             }
         }
-
         .disclaimer-box {
             margin-top: 30px;
             padding: 15px 20px;
@@ -811,7 +721,6 @@
             border-radius: 0 8px 8px 0;
             max-width: 90%;
         }
-
         /* --- TUTORIAL SECTION --- */
         .tutorial-section {
             padding: 100px 0;
@@ -819,14 +728,12 @@
             position: relative;
             border-top: 1px solid #1a1a1a;
         }
-
         .step-container {
             margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
-
         .step-card {
             background: #111;
             border-radius: 18px;
@@ -837,13 +744,11 @@
             position: relative;
             overflow: hidden;
         }
-
         .step-card:hover {
             transform: translateY(-8px);
             border-color: var(--neon-cyan);
             box-shadow: 0 10px 40px rgba(0, 255, 255, 0.1);
         }
-
         .step-icon {
             font-size: 3rem;
             color: var(--neon-pink);
@@ -855,7 +760,6 @@
             border-radius: 50%;
             margin: 0 auto 20px auto;
         }
-
         .step-card h4 {
             font-size: 1.4rem;
             color: white;
@@ -863,13 +767,11 @@
             font-weight: 700;
             text-transform: uppercase;
         }
-
         .step-card p {
             color: #999;
             font-size: 1rem;
             line-height: 1.5;
         }
-
         .step-num {
             position: absolute;
             top: 10px;
@@ -880,7 +782,6 @@
             z-index: 0;
             pointer-events: none;
         }
-
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -894,7 +795,6 @@
             max-width: 950px;
             background: #000;
         }
-
         .video-wrapper iframe {
             position: absolute;
             top: 0;
@@ -902,7 +802,6 @@
             width: 100%;
             height: 100%;
         }
-
         .video-label {
             text-align: center;
             color: var(--neon-cyan);
@@ -911,93 +810,75 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-
         /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 992px) {
             .web-title {
                 font-size: 2.8rem;
             }
-
             .web-grid {
                 gap: 30px;
             }
-
             /* Existing Mobile Tweaks */
             .hero h1 {
                 font-size: 3rem;
             }
-
             .app-mockup {
                 width: 280px;
                 height: 580px;
             }
         }
-
         @media (max-width: 768px) {
-
             /* Web Section Mobile Fixes */
             .web-section {
                 padding: 60px 0;
             }
-
             .web-card {
                 padding: 30px 20px;
                 border-width: 1px;
             }
-
             .web-grid {
                 flex-direction: column-reverse;
                 text-align: center;
                 gap: 30px;
             }
-
             .web-visual {
                 display: none;
             }
-
             /* Hide visual on mobile to save space and focus on CTA */
             .web-info {
                 width: 100%;
             }
-
             .web-title {
                 font-size: 2.2rem;
                 margin-bottom: 15px;
             }
-
             .web-desc {
                 margin: 0 auto 25px auto;
                 font-size: 1rem;
                 max-width: 100%;
             }
-
             .btn-group {
                 justify-content: center;
                 flex-direction: column;
                 gap: 10px;
             }
-
             .btn-group .btn {
                 width: 100%;
             }
-
             .disclaimer-box {
                 text-align: left;
                 margin: 30px auto 0 auto;
                 max-width: 100%;
                 font-size: 0.85rem;
             }
-
             /* Tutorial Mobile Fixes */
             .tutorial-section {
                 padding: 60px 0;
             }
-
             .step-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .step-card {
                 display: flex;
                 flex-direction: row;
@@ -1006,7 +887,6 @@
                 text-align: left;
                 gap: 20px;
             }
-
             .step-icon {
                 width: 60px;
                 height: 60px;
@@ -1015,39 +895,30 @@
                 margin: 0;
                 flex-shrink: 0;
             }
-
             .step-content {
                 flex: 1;
             }
-
             .step-card h4 {
                 margin-bottom: 5px;
                 font-size: 1.2rem;
             }
-
             .step-card p {
                 font-size: 0.9rem;
             }
-
             .step-num {
                 display: none;
             }
-
             /* Hide big number on mobile */
-
             /* Maintain Existing Nav/Hero Fixes */
             nav {
                 padding: 15px 20px;
             }
-
             .nav-links {
                 display: none;
             }
-
             .logo-container img {
                 height: 55px;
             }
-
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -1055,37 +926,30 @@
                 padding-top: 100px;
                 padding-bottom: 50px;
             }
-
             .hero-content {
                 padding-right: 0;
                 margin-bottom: 40px;
             }
-
             .hero h1 {
                 font-size: 2.5rem;
                 margin-bottom: 15px;
             }
-
             .hero-desc {
                 font-size: 1rem;
                 margin-bottom: 25px;
             }
-
             .app-mockup {
                 width: 260px;
                 height: 540px;
                 margin: 0 auto;
                 border-width: 6px;
             }
-
             .app-nav {
                 height: 45px;
             }
-
             .nav-item i {
                 font-size: 0.9rem;
             }
-
             .pirate-section,
             .features,
             .safety-section,
@@ -1093,20 +957,16 @@
             .tutorial-section {
                 padding: 50px 0;
             }
-
             .section-title {
                 font-size: 2rem;
                 margin-bottom: 30px;
             }
-
             .pirate-box {
                 padding: 20px;
             }
-
             .pirate-text {
                 font-size: 1.1rem;
             }
-
             .hero-content .btn {
                 width: 100%;
                 margin-bottom: 10px;
@@ -1114,18 +974,15 @@
                 text-align: center;
                 padding: 12px 20px;
             }
-
             /* Responsive Dropdown Adjustment */
             .dropdown {
                 display: block;
                 width: 100%;
                 margin-bottom: 10px;
             }
-
             .dropdown button {
                 width: 100%;
             }
-
             .dropdown-content {
                 width: 100%;
                 position: relative;
@@ -1133,82 +990,72 @@
         }
     </style>
 </head>
-
 <body>
-
     <canvas id="particles"></canvas>
-
     <nav class="container">
         <div class="logo-container">
-            <img src="assets/logo.png" alt="OtakuNexa Anime"
+            <img src="assets/logo.png" alt="OtakuNexa - Free Anime Streaming and Download App Logo"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <span
                 style="display:none; font-family:var(--font-head); font-weight:900; color:white; font-size:1.5rem;">OTAKU<span
                     class="highlight-pink">NEXA</span></span>
         </div>
         <div class="nav-links">
-            <a href="#features">FEATURES</a>
-            <a href="#safety">SECURITY</a>
-            <a href="#community">COMMUNITY</a>
-            <a href="https://t.me/OtakuNexa" target="_blank">TELEGRAM</a>
+            <a href="#features" title="Anime App Features">FEATURES</a>
+            <a href="#safety" title="Safe Anime Streaming">SECURITY</a>
+            <a href="#community" title="Otaku Community">COMMUNITY</a>
+            <a href="https://t.me/OtakuNexa" target="_blank" title="Join OtakuNexa Telegram">TELEGRAM</a>
         </div>
-
         <div class="dropdown">
-            <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">
+            <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;" aria-label="Get Free Anime App">
                 Get App <i class="fas fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#" id="nav-link-github">
+                <a href="#" id="nav-link-github" title="Download Anime App Server 1">
                     <span>Server 1</span> <span class="server-tag">Github</span>
                 </a>
-                <a href="#" id="nav-link-drive">
+                <a href="#" id="nav-link-drive" title="Download Anime App Server 2">
                     <span>Server 2</span> <span class="server-tag">Drive</span>
                 </a>
             </div>
         </div>
     </nav>
-
     <section class="hero container">
         <div class="hero-content">
-            <div class="hero-tagline">The Next Gen Anime Platform</div>
+            <div class="hero-tagline">The Next Gen Free Anime Platform</div>
             <h1 class="glitch-text" data-text="UNLEASH YOUR OTAKU SOUL">UNLEASH YOUR <br><span
                     class="highlight-pink">OTAKU</span> SOUL</h1>
             <p class="hero-desc">
                 Stop paying for restricted libraries. Enter the world of <strong>OtakuNexa</strong>. Unlimited
-                streaming, community-driven lists, and the power of the open sea.
+                anime streaming, community-driven lists, and the power of the open sea.
             </p>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start; width: 100%;">
-
                 <div class="dropdown">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" aria-label="Download Anime APK">
                         <i class="fas fa-download"></i> Download APK <i class="fas fa-caret-down"
                             style="margin-left: 10px;"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#" id="hero-link-github">
+                        <a href="#" id="hero-link-github" title="Fast Anime Download Server">
                             <i class="fab fa-github"></i> Server 1 (Fastest)
                         </a>
-                        <a href="#" id="hero-link-drive">
+                        <a href="#" id="hero-link-drive" title="Backup Anime Download Server">
                             <i class="fab fa-google-drive"></i> Server 2 (Backup)
                         </a>
                     </div>
                 </div>
-
                 <a href="javascript:void(0)" id="hero-btn-web" class="btn btn-secondary"
-                    style="border-color: var(--neon-pink); color: var(--neon-pink);">
+                    style="border-color: var(--neon-pink); color: var(--neon-pink);" title="Watch Anime Online Web Version">
                     <i class="fas fa-globe"></i> Web Version
                 </a>
             </div>
         </div>
-
         <div class="hero-visual">
             <div class="app-mockup">
                 <div class="screen-content">
-
                     <div class="loading-screen" id="loading-screen">
-                        <img src="assets/splash.gif" alt="Loading...">
+                        <img src="assets/splash.gif" alt="OtakuNexa Anime Streaming App Loading">
                     </div>
-
                     <div class="status-bar">
                         <span id="phone-time">12:30</span>
                         <div class="status-icons">
@@ -1217,12 +1064,10 @@
                             <i class="fas fa-battery-three-quarters"></i>
                         </div>
                     </div>
-
                     <div class="app-interface" id="app-interface">
-                        <div class="app-body" onclick="shuffleRandomImage()" title="Tap to see more screenshots">
-                            <img id="app-screen-img" src="assets/home.jpg" alt="App Screen">
+                        <div class="app-body" onclick="shuffleRandomImage()" title="Tap to see more free anime app screenshots">
+                            <img id="app-screen-img" src="assets/home.jpg" alt="OtakuNexa Android App Interface for Free Anime">
                         </div>
-
                         <div class="app-nav">
                             <div class="nav-item active" onclick="manualSwitch(0)">
                                 <i class="fas fa-home"></i>
@@ -1242,12 +1087,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
     <section id="web-version" class="web-section">
         <div class="container">
             <div class="web-card">
@@ -1256,23 +1099,20 @@
                         <span class="web-tag">BETA ACCESS</span>
                         <h2 class="web-title">NO SPACE? <br><span class="highlight-cyan">NO PROBLEM.</span></h2>
                         <p class="web-desc">
-                            Don't want to install the app? Try our lightweight Web Version. Instant access, no storage
-                            used.
+                            Don't want to install the app? Try our lightweight Web Version to watch free anime online. Instant access, no storage used.
                         </p>
-
                         <div class="btn-group">
                             <a href="#" id="btn-web-launch" class="btn btn-primary btn-glow"
-                                style="background: var(--neon-cyan); color: black;">
+                                style="background: var(--neon-cyan); color: black;" title="Launch Web Anime Streaming Platform">
                                 <i class="fas fa-rocket"></i>&nbsp; LAUNCH WEB APP
                             </a>
-                            <a href="#tutorial" class="btn btn-secondary" style="border-color: #555; color: #aaa;">
+                            <a href="#tutorial" class="btn btn-secondary" style="border-color: #555; color: #aaa;" title="How to watch and download anime">
                                 <i class="fas fa-question-circle"></i>&nbsp; HOW TO USE?
                             </a>
                         </div>
-
                         <div class="disclaimer-box">
                             <strong><i class="fas fa-info-circle"></i> HEADS UP:</strong>
-                            Web version has limited features. For the best experience (and no bugs), use the Android
+                            Web version has limited features. For the best anime streaming experience, use the Android
                             App.
                         </div>
                     </div>
@@ -1284,49 +1124,42 @@
             </div>
         </div>
     </section>
-
     <section id="tutorial" class="tutorial-section">
         <div class="container">
             <h2 class="section-title">HOW TO <span class="highlight-pink">USE IT</span></h2>
-
             <p class="video-label"><i class="fas fa-play-circle"></i> WATCH VIDEO GUIDE</p>
             <div class="video-wrapper">
-                <iframe id="tutorial-video" src="" title="OtakuNexa Tutorial" frameborder="0"
+                <iframe id="tutorial-video" src="" title="OtakuNexa Anime Streaming Tutorial" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-
             <h3 style="text-align: center; margin-bottom: 30px; font-family: var(--font-head); color: #fff;">OR FOLLOW
                 THESE 4 SIMPLE STEPS:</h3>
-
             <div class="step-container">
                 <div class="step-card">
                     <div class="step-num">01</div>
                     <div class="step-icon"><i class="fas fa-search"></i></div>
                     <div class="step-content">
                         <h4>1. SEARCH</h4>
-                        <p>Find your favorite anime. Click the poster.</p>
+                        <p>Find your favorite anime series or movies. Click the poster.</p>
                     </div>
                 </div>
-
                 <div class="step-card">
                     <div class="step-num">02</div>
                     <div class="step-icon"><i class="fas fa-language"></i></div>
                     <div class="step-content">
                         <h4>2. PICK LANG</h4>
-                        <p>Scroll down. Choose <strong>SUB</strong> or <strong>DUB</strong>.</p>
+                        <p>Scroll down. Choose <strong>SUB</strong> or <strong>DUB</strong> anime.</p>
                     </div>
                 </div>
-
                 <div class="step-card">
                     <div class="step-num">03</div>
                     <div class="step-icon"><i class="fas fa-layer-group"></i></div>
                     <div class="step-content">
                         <h4>3. CLICK BATCH</h4>
-                        <p>Click "1-10" or "11-20" to get episodes.</p>
+                        <p>Click "1-10" or "11-20" to batch download anime episodes.</p>
                     </div>
                 </div>
-
                 <div class="step-card">
                     <div class="step-num">04</div>
                     <div class="step-icon"><i class="fas fa-exclamation-circle" style="color: #ff3333;"></i></div>
@@ -1341,20 +1174,18 @@
             </div>
         </div>
     </section>
-
     <section class="pirate-section">
         <div class="container">
             <div class="pirate-box">
                 <i class="fas fa-skull-crossbones pirate-icon"></i>
                 <h2 class="highlight-pink" style="margin-bottom: 20px;">AHOY, NAKAMA!</h2>
                 <p class="pirate-text">
-                    "Why pay gold coins to the greedy corporations when the One Piece of anime is right here? We’ve
+                    "Why pay gold coins to the greedy corporations when the One Piece of free anime streaming is right here? We’ve
                     plundered the digital seas to bring ye the finest treasure! No ads to sink yer ship."
                 </p>
             </div>
         </div>
     </section>
-
     <section id="features" class="features">
         <div class="container">
             <h2 class="section-title">Why <span class="highlight-cyan">OtakuNexa</span>?</h2>
@@ -1362,7 +1193,7 @@
                 <div class="card">
                     <i class="fab fa-youtube card-icon"></i>
                     <h3>The YouTube Proxy</h3>
-                    <p>Stream limited anime officially available on YouTube but through our <strong>Superior
+                    <p>Stream limited free anime officially available on YouTube but through our <strong>Superior
                             UI</strong>.</p>
                 </div>
                 <div class="card">
@@ -1373,17 +1204,16 @@
                 <div class="card">
                     <i class="fas fa-users card-icon"></i>
                     <h3>The Nakama Guild</h3>
-                    <p>Curated lists like <em>"Anime where MC is a pervert"</em> created by the community.</p>
+                    <p>Curated anime lists like <em>"Anime where MC is overpowered"</em> created by the community.</p>
                 </div>
                 <div class="card">
                     <i class="fab fa-telegram card-icon" style="color: #0088cc;"></i>
                     <h3>The Infinite Vault</h3>
-                    <p>Hosted on Telegram servers. Unlimited Collection, blazing fast speeds.</p>
+                    <p>Hosted on Telegram servers. Unlimited Anime Download Collection, blazing fast speeds.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="safety" class="safety-section">
         <div class="container">
             <h2 class="section-title">Is It <span class="highlight-pink">Safe?</span></h2>
@@ -1398,7 +1228,6 @@
             </div>
         </div>
     </section>
-
     <footer id="download">
         <div class="container">
             <div class="footer-logo">
@@ -1406,60 +1235,53 @@
                 </h2>
             </div>
             <h3 style="margin-bottom: 30px;">Ready to set sail?</h3>
-
             <div class="dropdown" style="margin-bottom: 35px;">
-                <button class="btn btn-primary" style="font-size: 1.1rem;">
+                <button class="btn btn-primary" style="font-size: 1.1rem;" aria-label="Download Anime Streaming APK">
                     DOWNLOAD APK NOW <i class="fas fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" style="bottom: 100%; top: auto; margin-bottom: 5px;">
-                    <a href="#" id="footer-link-github">
+                    <a href="#" id="footer-link-github" title="Free Anime App Github Link">
                         <i class="fab fa-github"></i> Server 1 (GitHub)
                     </a>
-                    <a href="#" id="footer-link-drive">
+                    <a href="#" id="footer-link-drive" title="Free Anime App Drive Link">
                         <i class="fab fa-google-drive"></i> Server 2 (Drive)
                     </a>
                 </div>
             </div>
-
             <p style="color: #666; font-size: 0.8rem; margin-bottom: 20px;">Android 8.0+ Required • v1.0.0</p>
-
             <div style="margin-bottom: 25px; font-size: 0.8rem; line-height: 1.8;">
                 <a href="fix-anime-buffering.html" style="color:#666; text-decoration:none; margin:0 8px;">Fix
-                    Buffering</a> |
+                    Anime Buffering</a> |
                 <a href="watch-solo-leveling.html" style="color:#666; text-decoration:none; margin:0 8px;">Solo Leveling
                     S2</a> |
                 <a href="naruto-shippuden-telegram-download.html"
-                    style="color:#666; text-decoration:none; margin:0 8px;">Naruto Batch</a> <br>
+                    style="color:#666; text-decoration:none; margin:0 8px;">Naruto Batch Download</a> <br>
                 <a href="watch-one-piece-egghead-free.html" style="color:#666; text-decoration:none; margin:0 8px;">One
-                    Piece Egghead</a> |
+                    Piece Egghead Free</a> |
                 <a href="bleach-tybw-uncensored-batch.html"
-                    style="color:#666; text-decoration:none; margin:0 8px;">Bleach Uncensored</a> <br>
-
+                    style="color:#666; text-decoration:none; margin:0 8px;">Bleach Uncensored Streaming</a> <br>
                 <a href="naruto-shippuden-telegram-channel-english-dub.html"
                     style="color:#666; text-decoration:none; margin:0 8px;">Naruto Dub Links</a> |
                 <a href="anime-batch-downloader-no-link-shortener.html"
-                    style="color:#666; text-decoration:none; margin:0 8px;">No Link Shorteners</a> |
+                    style="color:#666; text-decoration:none; margin:0 8px;">No Link Shorteners Anime App</a> |
                 <a href="bleach-tybw-uncensored-telegram-link.html"
-                    style="color:#666; text-decoration:none; margin:0 8px;">Bleach Telegram</a> <br>
+                    style="color:#666; text-decoration:none; margin:0 8px;">Bleach Telegram Download</a> <br>
                 <a href="watch-one-piece-egghead-no-buffering.html"
                     style="color:#666; text-decoration:none; margin:0 8px;">One Piece No Buffer</a> |
                 <a href="how-to-download-anime-offline-android.html"
                     style="color:#666; text-decoration:none; margin:0 8px;">Offline Anime Mode</a>
             </div>
-
             <div class="social-icons">
-                <a href="https://t.me/OtakuNexa"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.youtube.com/@OtaKuNexa_official"><i class="fab fa-youtube-square"></i></a>
-                <a href="https://www.instagram.com/otakunexa_official"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/OtakuNexa" title="Join OtakuNexa Anime Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/@OtaKuNexa_official" title="OtakuNexa Anime YouTube"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.instagram.com/otakunexa_official" title="OtakuNexa Anime Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <br>
-            <p style="color: #444; font-size: 0.8rem;">&copy; 2025 OtakuNexa. Made by Otakus for Otakus.</p>
+            <p style="color: #444; font-size: 0.8rem;">&copy; 2025 OtakuNexa. The Best Free Anime Streaming Platform. Made by Otakus for Otakus.</p>
         </div>
     </footer>
-
     <script>
         // --- PHONE INTERACTION LOGIC ---
-
         // FIX 2: EXPANDED IMAGE LIST
         const appImages = [
             'assets/home.jpg',
@@ -1471,19 +1293,15 @@
             'assets/details1.jpg',     // Index 5 (Extra)
             'assets/details2.jpg'    // Index 6 (Extra)
         ];
-
         let currentIndex = 0;
         let slideInterval;
-
         function initPhone() {
             const loader = document.getElementById('loading-screen');
             const interface = document.getElementById('app-interface');
             const timeDisplay = document.getElementById('phone-time');
-
             // Set real time
             const now = new Date();
             timeDisplay.innerText = now.getHours() + ":" + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
-
             // Wait 3.5 seconds then show app
             setTimeout(() => {
                 loader.style.opacity = '0';
@@ -1494,17 +1312,14 @@
                 }, 500);
             }, 3500);
         }
-
         function updateScreen(index) {
             const img = document.getElementById('app-screen-img');
             const navItems = document.querySelectorAll('.nav-item');
-
             // Update Nav Highlight (Only if index is 0-3)
             navItems.forEach(el => el.classList.remove('active'));
             if (index < 4) {
                 if (navItems[index]) navItems[index].classList.add('active');
             }
-
             // Fade and Swap
             img.style.opacity = '0.5';
             setTimeout(() => {
@@ -1512,7 +1327,6 @@
                 img.onload = () => { img.style.opacity = '1'; }
             }, 200);
         }
-
         function startSlideshow() {
             slideInterval = setInterval(() => {
                 // Cycle through ALL images, not just 0-3
@@ -1520,14 +1334,12 @@
                 updateScreen(currentIndex);
             }, 3000);
         }
-
         function manualSwitch(index) {
             clearInterval(slideInterval);
             // Event propagation might trigger shuffle, so we use logic
             currentIndex = index;
             updateScreen(currentIndex);
         }
-
         // FIX 3: SHUFFLE FUNCTION
         function shuffleRandomImage() {
             clearInterval(slideInterval);
@@ -1540,17 +1352,13 @@
             currentIndex = newIndex;
             updateScreen(currentIndex);
         }
-
         initPhone();
-
         // --- PARTICLE SYSTEM ---
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
         let particlesArray;
-
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
@@ -1573,14 +1381,12 @@
                 ctx.fill();
             }
         }
-
         function initParticles() {
             particlesArray = [];
             for (let i = 0; i < 80; i++) {
                 particlesArray.push(new Particle());
             }
         }
-
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             for (let i = 0; i < particlesArray.length; i++) {
@@ -1589,16 +1395,13 @@
             }
             requestAnimationFrame(animateParticles);
         }
-
         initParticles();
         animateParticles();
-
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             initParticles();
         });
-
         // --- TERMINAL TYPING EFFECT ---
         const terminalContent = document.getElementById('terminal-content');
         const logs = [
@@ -1611,10 +1414,8 @@
             "[OK] Malware: None Detected",
             "> STATUS: CLEAN. SAFE TO INSTALL."
         ];
-
         let logIndex = 0;
         let charIndex = 0;
-
         function typeWriter() {
             if (logIndex < logs.length) {
                 let currentLine = logs[logIndex];
@@ -1632,7 +1433,6 @@
                     }
                     terminalContent.appendChild(lineDiv);
                 }
-
                 if (charIndex < currentLine.length) {
                     lineDiv.textContent += currentLine.charAt(charIndex);
                     charIndex++;
@@ -1644,7 +1444,6 @@
                 }
             }
         }
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1652,9 +1451,7 @@
                 }
             });
         });
-
         observer.observe(document.querySelector('.safety-section'));
-
     </script>
     <script src="config.js"></script>
     <script>
@@ -1665,20 +1462,17 @@
                 console.error("CRITICAL: config.js not found or not loaded!");
                 return;
             }
-
             // Apply App Downloads
             const setLink = (id, url) => {
                 const el = document.getElementById(id);
                 if (el) el.href = url;
             };
-
             setLink('nav-link-github', CONFIG.appServer1);
             setLink('nav-link-drive', CONFIG.appServer2);
             setLink('hero-link-github', CONFIG.appServer1);
             setLink('hero-link-drive', CONFIG.appServer2);
             setLink('footer-link-github', CONFIG.appServer1);
             setLink('footer-link-drive', CONFIG.appServer2);
-
             // Apply Web Launch
             const webBtns = ['btn-web-launch', 'hero-btn-web'];
             webBtns.forEach(id => {
@@ -1693,16 +1487,11 @@
                     }
                 }
             });
-
             // Apply Tutorial Video
             const frame = document.getElementById('tutorial-video');
             if (frame) frame.src = CONFIG.tutorialVideo;
         }
-
         document.addEventListener('DOMContentLoaded', applyLinks);
     </script>
 </body>
 </html>
-
-
-
