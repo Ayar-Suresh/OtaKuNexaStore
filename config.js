@@ -8,10 +8,10 @@
 const CONFIG = {
     // [1] APP DOWNLOAD LINKS
     // The "Fastest" server. Usually GitHub Releases.
-    appServer1: "https://github.com/OtaKuNexa/Apk/releases/download/Otaku/OtaKuNexa_V1.apk",
+    appServer1: "https://drive.google.com/uc?export=download&id=1CHodypazBVx013_YSFFOhu4mpRJ5Qevl",
     
     // The "Backup" server. Google Drive, MediaFire, etc.
-    appServer2: "https://drive.google.com/uc?export=download&id=1lDUOj-y1Kml7hSO8pckVwDmIgr90BX2S",
+    appServer2: "https://drive.google.com/uc?export=download&id=1NhArNQz1wVu2IatRgDJX654FTKj8De7h",
 
     // [2] WEB VERSION
     // URL where your web app is hosted (e.g., Vercel, Netlify)
@@ -28,6 +28,7 @@ const CONFIG = {
 //  DO NOT EDIT BELOW THIS LINE
 // ============================================================
 console.log("OtakuNexa Config Loaded:", CONFIG);
+
 
 
 
