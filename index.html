@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="application-name" content="OtaKuNexa">
-    
+
     <title>OtakuNexa - Free Anime Streaming & Batch Download App</title>
-    <meta name="description" content="Download OtakuNexa, the ultimate free anime streaming platform for Android. Watch and batch download HD anime, subbed and dubbed, with zero link shorteners.">
-    <meta name="keywords" content="anime streaming platform, free anime, anime download, watch anime online, free anime app Android, batch download anime, ad-free anime, OtakuNexa, sub and dub anime">
+    <meta name="description"
+        content="Download OtakuNexa, the ultimate free anime streaming platform for Android. Watch and batch download HD anime, subbed and dubbed, with zero link shorteners.">
+    <meta name="keywords"
+        content="anime streaming platform, free anime, anime download, watch anime online, free anime app Android, batch download anime, ad-free anime, OtakuNexa, sub and dub anime">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://otakunexa.online/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://otakunexa.online/">
     <meta property="og:title" content="OtakuNexa - The Ultimate Free Anime Haven">
-    <meta property="og:description" content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, sub and dub available.">
+    <meta property="og:description"
+        content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, sub and dub available.">
     <meta property="og:site_name" content="OtakuNexa">
-    <meta property="og:image" content="https://otakunexa.online/assets/search_icon.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://otakunexa.online/assets/search_icon.png">
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://otakunexa.online/">
     <meta property="twitter:title" content="OtakuNexa - Free Anime Streaming & Download App">
-    <meta property="twitter:description" content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, no link shorteners.">
-    <meta property="twitter:image" content="https://otakunexa.online/assets/search_icon.png"> <script type="application/ld+json">
+    <meta property="twitter:description"
+        content="Stream and batch download your favorite anime for free. Ad-free experience, 1080p quality, no link shorteners.">
+    <meta property="twitter:image" content="https://otakunexa.online/assets/search_icon.png">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -56,7 +63,7 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* --- CORE VARIABLES & RESET --- */
         :root {
@@ -68,11 +75,13 @@
             --font-head: 'Orbitron', sans-serif;
             --font-body: 'Rajdhani', sans-serif;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -80,20 +89,24 @@
             overflow-x: hidden;
             line-height: 1.5;
         }
+
         /* --- UTILITIES --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 8px;
         }
+
         .highlight-pink {
             color: var(--neon-pink);
             text-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
         }
+
         .highlight-cyan {
             color: var(--neon-cyan);
             text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
         }
+
         /* --- BUTTONS & DROPDOWN STYLES (UPDATED) --- */
         .btn {
             display: inline-block;
@@ -109,32 +122,38 @@
             position: relative;
             z-index: 10;
         }
+
         .btn-primary {
             background: var(--neon-pink);
             color: white;
             box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
         }
+
         .btn-primary:hover {
             background: white;
             color: var(--neon-pink);
             box-shadow: 0 0 40px rgba(255, 0, 204, 0.8);
             transform: translateY(-2px);
         }
+
         .btn-secondary {
             background: transparent;
             border: 2px solid var(--neon-cyan);
             color: var(--neon-cyan);
         }
+
         .btn-secondary:hover {
             background: var(--neon-cyan);
             color: black;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
         }
+
         /* --- CUSTOM DROPDOWN CSS --- */
         .dropdown {
             position: relative;
             display: inline-block;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -148,11 +167,13 @@
             left: 0;
             margin-top: 5px;
         }
+
         /* Show the dropdown menu on hover */
         .dropdown:hover .dropdown-content {
             display: block;
             animation: fadeIn 0.3s ease;
         }
+
         .dropdown-content a {
             color: white;
             padding: 15px 20px;
@@ -165,14 +186,17 @@
             transition: 0.2s;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .dropdown-content a:last-child {
             border-bottom: none;
         }
+
         .dropdown-content a:hover {
             background-color: var(--neon-pink);
             color: white;
             padding-left: 25px;
         }
+
         .server-tag {
             font-size: 0.7rem;
             background: rgba(255, 255, 255, 0.2);
@@ -180,21 +204,25 @@
             border-radius: 4px;
             margin-left: 10px;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(-10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         h1,
         h2,
         h3 {
             font-family: var(--font-head);
         }
+
         /* --- BACKGROUND PARTICLES --- */
         #particles {
             position: fixed;
@@ -205,6 +233,7 @@
             z-index: -1;
             opacity: 0.3;
         }
+
         /* --- NAVBAR --- */
         nav {
             display: flex;
@@ -218,14 +247,17 @@
             z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .logo-container img {
             height: 70px;
             filter: drop-shadow(0 0 5px var(--neon-pink));
         }
+
         .nav-links {
             display: flex;
             gap: 30px;
         }
+
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -234,10 +266,12 @@
             letter-spacing: 1px;
             transition: 0.3s;
         }
+
         .nav-links a:hover {
             color: var(--neon-cyan);
             text-shadow: 0 0 8px var(--neon-cyan);
         }
+
         /* --- HERO SECTION --- */
         .hero {
             min-height: 100vh;
@@ -249,11 +283,13 @@
             position: relative;
             overflow: hidden;
         }
+
         .hero-content {
             flex: 1;
             padding-right: 50px;
             z-index: 2;
         }
+
         .hero-tagline {
             font-size: 1.2rem;
             color: var(--neon-cyan);
@@ -262,18 +298,21 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+
         .hero h1 {
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
+
         .hero-desc {
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: #aaa;
             max-width: 600px;
         }
+
         /* --- PHONE MOCKUP & INTERACTIVE UI --- */
         .hero-visual {
             flex: 1;
@@ -281,6 +320,7 @@
             justify-content: center;
             position: relative;
         }
+
         .app-mockup {
             width: 340px;
             height: 650px;
@@ -293,6 +333,7 @@
             overflow: hidden;
             animation: float 6s ease-in-out infinite;
         }
+
         .app-mockup::before {
             content: '';
             position: absolute;
@@ -306,12 +347,14 @@
             border-bottom-right-radius: 15px;
             z-index: 30;
         }
+
         .screen-content {
             width: 100%;
             height: 100%;
             position: relative;
             background: #000;
         }
+
         /* LOADING SCREEN */
         .loading-screen {
             position: absolute;
@@ -326,11 +369,13 @@
             justify-content: center;
             transition: opacity 0.5s ease;
         }
+
         .loading-screen img {
             width: 80%;
             height: auto;
             object-fit: contain;
         }
+
         /* STATUS BAR */
         .status-bar {
             position: absolute;
@@ -348,10 +393,12 @@
             font-family: sans-serif;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
         }
+
         .status-icons i {
             margin-left: 5px;
             font-size: 10px;
         }
+
         /* APP INTERFACE */
         .app-interface {
             width: 100%;
@@ -361,6 +408,7 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
+
         .app-body {
             flex: 1;
             background: #111;
@@ -369,12 +417,14 @@
             cursor: pointer;
             padding-top: 30px;
         }
+
         .app-body img {
             width: 100%;
             height: 100%;
             object-position: top;
             transition: opacity 0.3s ease;
         }
+
         /* NAVIGATION */
         .app-nav {
             height: 50px;
@@ -387,6 +437,7 @@
             z-index: 5;
             padding-bottom: 5px;
         }
+
         .nav-item {
             color: #666;
             cursor: pointer;
@@ -396,21 +447,26 @@
             align-items: center;
             gap: 2px;
         }
+
         .nav-item i {
             font-size: 1rem;
         }
+
         .nav-item span {
             font-size: 0.6rem;
             font-weight: 500;
         }
+
         .nav-item:hover,
         .nav-item.active {
             color: var(--neon-pink);
         }
+
         /* ANIMATIONS */
         .glitch-text {
             position: relative;
         }
+
         .glitch-text::before,
         .glitch-text::after {
             content: attr(data-text);
@@ -421,51 +477,62 @@
             height: 100%;
             background: var(--bg-dark);
         }
+
         .glitch-text::before {
             left: 2px;
             text-shadow: -1px 0 var(--neon-pink);
             clip: rect(24px, 550px, 90px, 0);
             animation: glitch-anim-2 3s infinite linear alternate-reverse;
         }
+
         .glitch-text::after {
             left: -2px;
             text-shadow: -1px 0 var(--neon-cyan);
             clip: rect(85px, 550px, 140px, 0);
             animation: glitch-anim 2.5s infinite linear alternate-reverse;
         }
+
         @keyframes glitch-anim {
             0% {
                 clip: rect(14px, 9999px, 122px, 0);
             }
+
             100% {
                 clip: rect(69px, 9999px, 18px, 0);
             }
         }
+
         @keyframes glitch-anim-2 {
             0% {
                 clip: rect(122px, 9999px, 14px, 0);
             }
+
             100% {
                 clip: rect(18px, 9999px, 69px, 0);
             }
         }
+
         @keyframes float {
             0% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-15px);
             }
+
             100% {
                 transform: translateY(0px);
             }
         }
+
         /* --- SECTIONS --- */
         .pirate-section {
             padding: 80px 0;
             text-align: center;
             background: linear-gradient(180deg, var(--bg-dark) 0%, #150010 100%);
         }
+
         .pirate-box {
             border: 2px solid var(--neon-cyan);
             background: rgba(0, 0, 0, 0.6);
@@ -475,31 +542,37 @@
             margin: 0 auto;
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
         }
+
         .pirate-icon {
             font-size: 3rem;
             color: var(--neon-pink);
             margin-bottom: 20px;
         }
+
         .pirate-text {
             font-size: 1.3rem;
             font-style: italic;
             color: #fff;
         }
+
         .features {
             padding: 80px 0;
             background: var(--bg-dark);
         }
+
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
             text-transform: uppercase;
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
+
         .card {
             background: var(--bg-panel);
             padding: 30px;
@@ -509,6 +582,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .card::before {
             content: '';
             position: absolute;
@@ -520,30 +594,37 @@
             transform: scaleY(0);
             transition: 0.3s;
         }
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
+
         .card:hover::before {
             transform: scaleY(1);
         }
+
         .card-icon {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--neon-cyan);
         }
+
         .card h3 {
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
+
         .card p {
             color: #aaa;
             font-size: 1rem;
         }
+
         .safety-section {
             padding: 60px 0;
             background: #0a0a0e;
         }
+
         .terminal-window {
             background: #1e1e1e;
             border-radius: 10px;
@@ -554,36 +635,44 @@
             overflow: hidden;
             border: 1px solid #333;
         }
+
         .terminal-header {
             background: #2d2d2d;
             padding: 10px 15px;
             display: flex;
             gap: 8px;
         }
+
         .dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
+
         .red {
             background: #ff5f56;
         }
+
         .yellow {
             background: #ffbd2e;
         }
+
         .green {
             background: #27c93f;
         }
+
         .terminal-body {
             padding: 20px;
             color: #27c93f;
             font-size: 0.9rem;
         }
+
         .scan-line {
             margin-bottom: 8px;
             display: block;
             word-break: break-all;
         }
+
         .scan-success {
             color: var(--neon-cyan);
             font-weight: bold;
@@ -592,37 +681,44 @@
             padding: 10px;
             display: inline-block;
         }
+
         footer {
             padding: 50px 0;
             background: black;
             text-align: center;
             border-top: 1px solid #333;
         }
+
         .social-icons a {
             color: white;
             font-size: 1.5rem;
             margin: 0 10px;
             transition: 0.3s;
         }
+
         .social-icons a:hover {
             color: var(--neon-pink);
         }
+
         /* --- RESPONSIVE MOBILE TWEAKS --- */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 3rem;
             }
+
             .app-mockup {
                 width: 280px;
                 height: 580px;
             }
         }
+
         /* --- WEB VERSION SECTION --- */
         .web-section {
             padding: 80px 0;
             background: linear-gradient(180deg, #150010 0%, var(--bg-dark) 100%);
             text-align: center;
         }
+
         .web-card {
             background: rgba(255, 255, 255, 0.05);
             border: 2px solid var(--neon-cyan);
@@ -638,6 +734,7 @@
             flex-direction: column;
             justify-content: center;
         }
+
         .web-card::before {
             content: 'WEB';
             position: absolute;
@@ -649,6 +746,7 @@
             pointer-events: none;
             color: white;
         }
+
         .web-grid {
             display: flex;
             flex-direction: row;
@@ -659,15 +757,18 @@
             position: relative;
             z-index: 2;
         }
+
         .web-info {
             flex: 1;
         }
+
         .web-visual {
             flex: 0.8;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         .web-tag {
             background: var(--neon-cyan);
             color: #000;
@@ -679,12 +780,14 @@
             display: inline-block;
             margin-bottom: 25px;
         }
+
         .web-title {
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 25px;
             text-transform: uppercase;
         }
+
         .web-desc {
             color: #ccc;
             margin-bottom: 35px;
@@ -692,25 +795,31 @@
             line-height: 1.8;
             max-width: 90%;
         }
+
         .btn-group {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
+
         .btn-glow {
             animation: pulse-glow 2s infinite;
         }
+
         @keyframes pulse-glow {
             0% {
                 box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
             }
+
             70% {
                 box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
             }
         }
+
         .disclaimer-box {
             margin-top: 30px;
             padding: 15px 20px;
@@ -721,6 +830,7 @@
             border-radius: 0 8px 8px 0;
             max-width: 90%;
         }
+
         /* --- TUTORIAL SECTION --- */
         .tutorial-section {
             padding: 100px 0;
@@ -728,12 +838,14 @@
             position: relative;
             border-top: 1px solid #1a1a1a;
         }
+
         .step-container {
             margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
+
         .step-card {
             background: #111;
             border-radius: 18px;
@@ -744,11 +856,13 @@
             position: relative;
             overflow: hidden;
         }
+
         .step-card:hover {
             transform: translateY(-8px);
             border-color: var(--neon-cyan);
             box-shadow: 0 10px 40px rgba(0, 255, 255, 0.1);
         }
+
         .step-icon {
             font-size: 3rem;
             color: var(--neon-pink);
@@ -760,6 +874,7 @@
             border-radius: 50%;
             margin: 0 auto 20px auto;
         }
+
         .step-card h4 {
             font-size: 1.4rem;
             color: white;
@@ -767,11 +882,13 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+
         .step-card p {
             color: #999;
             font-size: 1rem;
             line-height: 1.5;
         }
+
         .step-num {
             position: absolute;
             top: 10px;
@@ -782,6 +899,7 @@
             z-index: 0;
             pointer-events: none;
         }
+
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -795,6 +913,7 @@
             max-width: 950px;
             background: #000;
         }
+
         .video-wrapper iframe {
             position: absolute;
             top: 0;
@@ -802,6 +921,7 @@
             width: 100%;
             height: 100%;
         }
+
         .video-label {
             text-align: center;
             color: var(--neon-cyan);
@@ -810,75 +930,93 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+
         /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 992px) {
             .web-title {
                 font-size: 2.8rem;
             }
+
             .web-grid {
                 gap: 30px;
             }
+
             /* Existing Mobile Tweaks */
             .hero h1 {
                 font-size: 3rem;
             }
+
             .app-mockup {
                 width: 280px;
                 height: 580px;
             }
         }
+
         @media (max-width: 768px) {
+
             /* Web Section Mobile Fixes */
             .web-section {
                 padding: 60px 0;
             }
+
             .web-card {
                 padding: 30px 20px;
                 border-width: 1px;
             }
+
             .web-grid {
                 flex-direction: column-reverse;
                 text-align: center;
                 gap: 30px;
             }
+
             .web-visual {
                 display: none;
             }
+
             /* Hide visual on mobile to save space and focus on CTA */
             .web-info {
                 width: 100%;
             }
+
             .web-title {
                 font-size: 2.2rem;
                 margin-bottom: 15px;
             }
+
             .web-desc {
                 margin: 0 auto 25px auto;
                 font-size: 1rem;
                 max-width: 100%;
             }
+
             .btn-group {
                 justify-content: center;
                 flex-direction: column;
                 gap: 10px;
             }
+
             .btn-group .btn {
                 width: 100%;
             }
+
             .disclaimer-box {
                 text-align: left;
                 margin: 30px auto 0 auto;
                 max-width: 100%;
                 font-size: 0.85rem;
             }
+
             /* Tutorial Mobile Fixes */
             .tutorial-section {
                 padding: 60px 0;
             }
+
             .step-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .step-card {
                 display: flex;
                 flex-direction: row;
@@ -887,6 +1025,7 @@
                 text-align: left;
                 gap: 20px;
             }
+
             .step-icon {
                 width: 60px;
                 height: 60px;
@@ -895,30 +1034,38 @@
                 margin: 0;
                 flex-shrink: 0;
             }
+
             .step-content {
                 flex: 1;
             }
+
             .step-card h4 {
                 margin-bottom: 5px;
                 font-size: 1.2rem;
             }
+
             .step-card p {
                 font-size: 0.9rem;
             }
+
             .step-num {
                 display: none;
             }
+
             /* Hide big number on mobile */
             /* Maintain Existing Nav/Hero Fixes */
             nav {
                 padding: 15px 20px;
             }
+
             .nav-links {
                 display: none;
             }
+
             .logo-container img {
                 height: 55px;
             }
+
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -926,30 +1073,37 @@
                 padding-top: 100px;
                 padding-bottom: 50px;
             }
+
             .hero-content {
                 padding-right: 0;
                 margin-bottom: 40px;
             }
+
             .hero h1 {
                 font-size: 2.5rem;
                 margin-bottom: 15px;
             }
+
             .hero-desc {
                 font-size: 1rem;
                 margin-bottom: 25px;
             }
+
             .app-mockup {
                 width: 260px;
                 height: 540px;
                 margin: 0 auto;
                 border-width: 6px;
             }
+
             .app-nav {
                 height: 45px;
             }
+
             .nav-item i {
                 font-size: 0.9rem;
             }
+
             .pirate-section,
             .features,
             .safety-section,
@@ -957,16 +1111,20 @@
             .tutorial-section {
                 padding: 50px 0;
             }
+
             .section-title {
                 font-size: 2rem;
                 margin-bottom: 30px;
             }
+
             .pirate-box {
                 padding: 20px;
             }
+
             .pirate-text {
                 font-size: 1.1rem;
             }
+
             .hero-content .btn {
                 width: 100%;
                 margin-bottom: 10px;
@@ -974,15 +1132,18 @@
                 text-align: center;
                 padding: 12px 20px;
             }
+
             /* Responsive Dropdown Adjustment */
             .dropdown {
                 display: block;
                 width: 100%;
                 margin-bottom: 10px;
             }
+
             .dropdown button {
                 width: 100%;
             }
+
             .dropdown-content {
                 width: 100%;
                 position: relative;
@@ -990,6 +1151,7 @@
         }
     </style>
 </head>
+
 <body>
     <canvas id="particles"></canvas>
     <nav class="container">
@@ -1004,9 +1166,10 @@
             <a href="#features" title="Anime App Features">FEATURES</a>
             <a href="#safety" title="Safe Anime Streaming">SECURITY</a>
             <a href="#community" title="Otaku Community">COMMUNITY</a>
-            <a href="https://t.me/OtakuNexa" target="_blank" title="Join OtakuNexa Telegram">TELEGRAM</a>
+            <a href="https://t.me/+G3e4doiQXFExMzU1" target="_blank" title="Join OtakuNexa Telegram">TELEGRAM</a>
         </div>
-        <a href="#" id="nav-btn-download" class="btn btn-primary btn-download-main" style="padding: 10px 20px; font-size: 0.8rem;" aria-label="Get Free Anime App">
+        <a href="#" id="nav-btn-download" class="btn btn-primary btn-download-main"
+            style="padding: 10px 20px; font-size: 0.8rem;" aria-label="Get Free Anime App">
             Get App <i class="fas fa-download"></i>
         </a>
     </nav>
@@ -1021,16 +1184,20 @@
             </p>
             <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
                 <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;">
-                    <button id="hero-btn-download" class="btn btn-primary btn-download-main" aria-label="Download Anime APK">
+                    <button id="hero-btn-download" class="btn btn-primary btn-download-main"
+                        aria-label="Download Anime APK">
                         <i class="fas fa-download"></i> Download APK
                     </button>
                     <a href="javascript:void(0)" id="hero-btn-web" class="btn btn-secondary"
-                        style="border-color: var(--neon-pink); color: var(--neon-pink);" title="Watch Anime Online Web Version">
+                        style="border-color: var(--neon-pink); color: var(--neon-pink);"
+                        title="Watch Anime Online Web Version">
                         <i class="fas fa-globe"></i> Web Version
                     </a>
                 </div>
-                <div class="download-help-text" style="display: none; font-size: 0.9rem; color: #aaa; margin-top: 5px; animation: fadeIn 0.5s ease;">
-                    Downloading... Link didn't work? <a href="#" class="link-backup highlight-cyan" style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
+                <div class="download-help-text"
+                    style="display: none; font-size: 0.9rem; color: #aaa; margin-top: 5px; animation: fadeIn 0.5s ease;">
+                    Downloading... Link didn't work? <a href="#" class="link-backup highlight-cyan"
+                        style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
                 </div>
             </div>
         </div>
@@ -1049,8 +1216,10 @@
                         </div>
                     </div>
                     <div class="app-interface" id="app-interface">
-                        <div class="app-body" onclick="shuffleRandomImage()" title="Tap to see more free anime app screenshots">
-                            <img id="app-screen-img" src="assets/home.jpg" alt="OtakuNexa Android App Interface for Free Anime">
+                        <div class="app-body" onclick="shuffleRandomImage()"
+                            title="Tap to see more free anime app screenshots">
+                            <img id="app-screen-img" src="assets/home.jpg"
+                                alt="OtakuNexa Android App Interface for Free Anime">
                         </div>
                         <div class="app-nav">
                             <div class="nav-item active" onclick="manualSwitch(0)">
@@ -1083,14 +1252,17 @@
                         <span class="web-tag">BETA ACCESS</span>
                         <h2 class="web-title">NO SPACE? <br><span class="highlight-cyan">NO PROBLEM.</span></h2>
                         <p class="web-desc">
-                            Don't want to install the app? Try our lightweight Web Version to watch free anime online. Instant access, no storage used.
+                            Don't want to install the app? Try our lightweight Web Version to watch free anime online.
+                            Instant access, no storage used.
                         </p>
                         <div class="btn-group">
                             <a href="#" id="btn-web-launch" class="btn btn-primary btn-glow"
-                                style="background: var(--neon-cyan); color: black;" title="Launch Web Anime Streaming Platform">
+                                style="background: var(--neon-cyan); color: black;"
+                                title="Launch Web Anime Streaming Platform">
                                 <i class="fas fa-rocket"></i>&nbsp; LAUNCH WEB APP
                             </a>
-                            <a href="#tutorial" class="btn btn-secondary" style="border-color: #555; color: #aaa;" title="How to watch and download anime">
+                            <a href="#tutorial" class="btn btn-secondary" style="border-color: #555; color: #aaa;"
+                                title="How to watch and download anime">
                                 <i class="fas fa-question-circle"></i>&nbsp; HOW TO USE?
                             </a>
                         </div>
@@ -1164,7 +1336,8 @@
                 <i class="fas fa-skull-crossbones pirate-icon"></i>
                 <h2 class="highlight-pink" style="margin-bottom: 20px;">AHOY, NAKAMA!</h2>
                 <p class="pirate-text">
-                    "Why pay gold coins to the greedy corporations when the One Piece of free anime streaming is right here? We’ve
+                    "Why pay gold coins to the greedy corporations when the One Piece of free anime streaming is right
+                    here? We’ve
                     plundered the digital seas to bring ye the finest treasure! No ads to sink yer ship."
                 </p>
             </div>
@@ -1219,12 +1392,16 @@
                 </h2>
             </div>
             <h3 style="margin-bottom: 30px;">Ready to set sail?</h3>
-            <div style="margin-bottom: 35px; display: inline-flex; flex-direction: column; align-items: center; gap: 10px;">
-                <button id="footer-btn-download" class="btn btn-primary btn-download-main" style="font-size: 1.1rem;" aria-label="Download Anime Streaming APK">
+            <div
+                style="margin-bottom: 35px; display: inline-flex; flex-direction: column; align-items: center; gap: 10px;">
+                <button id="footer-btn-download" class="btn btn-primary btn-download-main" style="font-size: 1.1rem;"
+                    aria-label="Download Anime Streaming APK">
                     DOWNLOAD APK NOW <i class="fas fa-download"></i>
                 </button>
-                <div class="download-help-text" style="display: none; font-size: 0.9rem; color: #aaa; animation: fadeIn 0.5s ease;">
-                    Downloading... Link didn't work? <br><a href="#" class="link-backup highlight-cyan" style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
+                <div class="download-help-text"
+                    style="display: none; font-size: 0.9rem; color: #aaa; animation: fadeIn 0.5s ease;">
+                    Downloading... Link didn't work? <br><a href="#" class="link-backup highlight-cyan"
+                        style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
                 </div>
             </div>
             <p style="color: #666; font-size: 0.8rem; margin-bottom: 20px;">Android 8.0+ Required • v1.0.0</p>
@@ -1251,12 +1428,16 @@
                     style="color:#666; text-decoration:none; margin:0 8px;">Offline Anime Mode</a>
             </div>
             <div class="social-icons">
-                <a href="https://t.me/OtakuNexa" title="Join OtakuNexa Anime Telegram"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.youtube.com/@OtaKuNexa_official" title="OtakuNexa Anime YouTube"><i class="fab fa-youtube-square"></i></a>
-                <a href="https://www.instagram.com/otakunexa_official" title="OtakuNexa Anime Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/+G3e4doiQXFExMzU1" title="Join OtakuNexa Anime Telegram"><i
+                        class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/@OtaKuNexa_official" title="OtakuNexa Anime YouTube"><i
+                        class="fab fa-youtube-square"></i></a>
+                <a href="https://www.instagram.com/otakunexa_official" title="OtakuNexa Anime Instagram"><i
+                        class="fab fa-instagram"></i></a>
             </div>
             <br>
-            <p style="color: #444; font-size: 0.8rem;">&copy; 2025 OtakuNexa. The Best Free Anime Streaming Platform. Made by Otakus for Otakus.</p>
+            <p style="color: #444; font-size: 0.8rem;">&copy; 2025 OtakuNexa. The Best Free Anime Streaming Platform.
+                Made by Otakus for Otakus.</p>
         </div>
     </footer>
     <script>
@@ -1441,23 +1622,23 @@
                 console.error("CRITICAL: config.js not found or not loaded!");
                 return;
             }
-            
+
             // Setup Direct Download Logic
             const servers = [CONFIG.appServer1, CONFIG.appServer2].filter(Boolean);
-            
+
             function handleDownloadClick(e) {
                 e.preventDefault();
-                if(servers.length === 0) return;
-                
+                if (servers.length === 0) return;
+
                 // Pick a random server for main download
                 const randomIndex = Math.floor(Math.random() * servers.length);
                 const selectedServer = servers[randomIndex];
                 // Backup server is the other one (or same if only 1 exists)
                 const backupServer = servers.find(s => s !== selectedServer) || servers[0];
-                
+
                 // Trigger download via location to bypass app chooser prompts
                 window.location.href = selectedServer;
-                
+
                 // Update UI visually
                 document.querySelectorAll('.btn-download-main').forEach(btn => {
                     btn.innerHTML = '<i class="fas fa-check-circle"></i> DOWNLOADING...';
@@ -1466,12 +1647,12 @@
                     btn.style.boxShadow = '0 0 20px rgba(0, 255, 204, 0.6)';
                     btn.style.pointerEvents = 'none'; // Prevent triple clicks
                 });
-                
+
                 // Reveal Backup links
                 document.querySelectorAll('.download-help-text').forEach(el => {
                     el.style.display = 'block';
                 });
-                
+
                 // Set Backup URL
                 document.querySelectorAll('.link-backup').forEach(link => {
                     link.href = backupServer;
@@ -1505,4 +1686,5 @@
         document.addEventListener('DOMContentLoaded', applyLinks);
     </script>
 </body>
+
 </html>
