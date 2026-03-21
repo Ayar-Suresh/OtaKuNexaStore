@@ -35,12 +35,6 @@ const CONFIG = {
 ```
 No HTML knowledge required!
 
-## 🌐 Is a README good for a landing page?
-
-**Absolutely!** Even if it's "just" a landing page, having a `README.md` is incredibly valuable because:
-1. **Professionalism:** It shows anyone looking at your source code (like future employers, open-source contributors, or developers) that you organize your projects intelligently.
-2. **Easy Maintenance:** It explains how to deploy and configure the site (like the `config.js` explanation above). If you come back to the code 6 months from now, you'll immediately know how to update it.
-3. **SEO & Link Building:** GitHub repositories rank high on Google. A good README with backlinks to your live site helps drive traffic and improves search engine visibility.
 
 ## 👨‍💻 Author
 **Ayar Suresh**
