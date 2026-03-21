@@ -1006,19 +1006,9 @@
             <a href="#community" title="Otaku Community">COMMUNITY</a>
             <a href="https://t.me/OtakuNexa" target="_blank" title="Join OtakuNexa Telegram">TELEGRAM</a>
         </div>
-        <div class="dropdown">
-            <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;" aria-label="Get Free Anime App">
-                Get App <i class="fas fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#" id="nav-link-github" title="Download Anime App Server 1">
-                    <span>Server 1</span> <span class="server-tag">Github</span>
-                </a>
-                <a href="#" id="nav-link-drive" title="Download Anime App Server 2">
-                    <span>Server 2</span> <span class="server-tag">Drive</span>
-                </a>
-            </div>
-        </div>
+        <a href="#" id="nav-btn-download" class="btn btn-primary btn-download-main" style="padding: 10px 20px; font-size: 0.8rem;" aria-label="Get Free Anime App">
+            Get App <i class="fas fa-download"></i>
+        </a>
     </nav>
     <section class="hero container">
         <div class="hero-content">
@@ -1029,25 +1019,19 @@
                 Stop paying for restricted libraries. Enter the world of <strong>OtakuNexa</strong>. Unlimited
                 anime streaming, community-driven lists, and the power of the open sea.
             </p>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start; width: 100%;">
-                <div class="dropdown">
-                    <button class="btn btn-primary" aria-label="Download Anime APK">
-                        <i class="fas fa-download"></i> Download APK <i class="fas fa-caret-down"
-                            style="margin-left: 10px;"></i>
+            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;">
+                    <button id="hero-btn-download" class="btn btn-primary btn-download-main" aria-label="Download Anime APK">
+                        <i class="fas fa-download"></i> Download APK
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#" id="hero-link-github" title="Fast Anime Download Server">
-                            <i class="fab fa-github"></i> Server 1 (Fastest)
-                        </a>
-                        <a href="#" id="hero-link-drive" title="Backup Anime Download Server">
-                            <i class="fab fa-google-drive"></i> Server 2 (Backup)
-                        </a>
-                    </div>
+                    <a href="javascript:void(0)" id="hero-btn-web" class="btn btn-secondary"
+                        style="border-color: var(--neon-pink); color: var(--neon-pink);" title="Watch Anime Online Web Version">
+                        <i class="fas fa-globe"></i> Web Version
+                    </a>
                 </div>
-                <a href="javascript:void(0)" id="hero-btn-web" class="btn btn-secondary"
-                    style="border-color: var(--neon-pink); color: var(--neon-pink);" title="Watch Anime Online Web Version">
-                    <i class="fas fa-globe"></i> Web Version
-                </a>
+                <div class="download-help-text" style="display: none; font-size: 0.9rem; color: #aaa; margin-top: 5px; animation: fadeIn 0.5s ease;">
+                    Downloading... Link didn't work? <a href="#" class="link-backup highlight-cyan" style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
+                </div>
             </div>
         </div>
         <div class="hero-visual">
@@ -1235,17 +1219,12 @@
                 </h2>
             </div>
             <h3 style="margin-bottom: 30px;">Ready to set sail?</h3>
-            <div class="dropdown" style="margin-bottom: 35px;">
-                <button class="btn btn-primary" style="font-size: 1.1rem;" aria-label="Download Anime Streaming APK">
-                    DOWNLOAD APK NOW <i class="fas fa-caret-down"></i>
+            <div style="margin-bottom: 35px; display: inline-flex; flex-direction: column; align-items: center; gap: 10px;">
+                <button id="footer-btn-download" class="btn btn-primary btn-download-main" style="font-size: 1.1rem;" aria-label="Download Anime Streaming APK">
+                    DOWNLOAD APK NOW <i class="fas fa-download"></i>
                 </button>
-                <div class="dropdown-content" style="bottom: 100%; top: auto; margin-bottom: 5px;">
-                    <a href="#" id="footer-link-github" title="Free Anime App Github Link">
-                        <i class="fab fa-github"></i> Server 1 (GitHub)
-                    </a>
-                    <a href="#" id="footer-link-drive" title="Free Anime App Drive Link">
-                        <i class="fab fa-google-drive"></i> Server 2 (Drive)
-                    </a>
+                <div class="download-help-text" style="display: none; font-size: 0.9rem; color: #aaa; animation: fadeIn 0.5s ease;">
+                    Downloading... Link didn't work? <br><a href="#" class="link-backup highlight-cyan" style="text-decoration: underline; font-weight: bold;">Click for Backup Server</a>
                 </div>
             </div>
             <p style="color: #666; font-size: 0.8rem; margin-bottom: 20px;">Android 8.0+ Required • v1.0.0</p>
@@ -1462,17 +1441,49 @@
                 console.error("CRITICAL: config.js not found or not loaded!");
                 return;
             }
-            // Apply App Downloads
-            const setLink = (id, url) => {
-                const el = document.getElementById(id);
-                if (el) el.href = url;
-            };
-            setLink('nav-link-github', CONFIG.appServer1);
-            setLink('nav-link-drive', CONFIG.appServer2);
-            setLink('hero-link-github', CONFIG.appServer1);
-            setLink('hero-link-drive', CONFIG.appServer2);
-            setLink('footer-link-github', CONFIG.appServer1);
-            setLink('footer-link-drive', CONFIG.appServer2);
+            
+            // Setup Direct Download Logic
+            const servers = [CONFIG.appServer1, CONFIG.appServer2].filter(Boolean);
+            
+            function handleDownloadClick(e) {
+                e.preventDefault();
+                if(servers.length === 0) return;
+                
+                // Pick a random server for main download
+                const randomIndex = Math.floor(Math.random() * servers.length);
+                const selectedServer = servers[randomIndex];
+                // Backup server is the other one (or same if only 1 exists)
+                const backupServer = servers.find(s => s !== selectedServer) || servers[0];
+                
+                // Trigger download via location to bypass app chooser prompts
+                window.location.href = selectedServer;
+                
+                // Update UI visually
+                document.querySelectorAll('.btn-download-main').forEach(btn => {
+                    btn.innerHTML = '<i class="fas fa-check-circle"></i> DOWNLOADING...';
+                    btn.style.background = '#00FFCC';
+                    btn.style.color = '#000';
+                    btn.style.boxShadow = '0 0 20px rgba(0, 255, 204, 0.6)';
+                    btn.style.pointerEvents = 'none'; // Prevent triple clicks
+                });
+                
+                // Reveal Backup links
+                document.querySelectorAll('.download-help-text').forEach(el => {
+                    el.style.display = 'block';
+                });
+                
+                // Set Backup URL
+                document.querySelectorAll('.link-backup').forEach(link => {
+                    link.href = backupServer;
+                    link.target = '_blank';
+                });
+            }
+
+            // Bind click events to main download buttons
+            document.querySelectorAll('.btn-download-main').forEach(btn => {
+                btn.addEventListener('click', handleDownloadClick);
+            });
+
             // Apply Web Launch
             const webBtns = ['btn-web-launch', 'hero-btn-web'];
             webBtns.forEach(id => {
