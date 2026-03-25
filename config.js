@@ -6,7 +6,7 @@
 // ============================================================
 
 const CONFIG = {
-    https://drive.google.com/file/d/1kKSpEjHdFe-cm9qwnYTUP7fbDAL-Kiis/view?usp=sharing
+   
     // [1] APP DOWNLOAD LINKS
     // The "Fastest" server. Usually GitHub Releases.
     appServer1: "https://drive.google.com/uc?export=download&id=1kKSpEjHdFe-cm9qwnYTUP7fbDAL-Kiis",
